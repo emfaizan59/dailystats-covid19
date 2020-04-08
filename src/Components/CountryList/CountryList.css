@@ -1,0 +1,34 @@
+.totalCases{
+    text-align: center;
+    padding: 0px;
+    margin-top: 05px;
+    margin-bottom: 05px;
+}
+.totalCases h2 {
+    font-size: 22px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ margin-bottom: -25px;
+}
+.twoColDiv{
+    margin-top: -8px;
+    text-align: center;
+    padding: 0px;
+    margin-bottom: -8px;
+}
+
+.twoColDiv h5 {
+    font-size: 14px;
+    font-weight: bolder;
+    margin-bottom: -20px;
+}
+.twoColDiv h4 {
+    margin-bottom: -20px;
+}
+
+.cardView:hover .details{
+    display: block;
+}
+
+.details{
+    display: none;
+}
