@@ -10,7 +10,6 @@ function App() {
     <div>
       <Header />
       <Carousel />
-      <SearchBar />
       <CountryList />
       <Footer />
     </div>

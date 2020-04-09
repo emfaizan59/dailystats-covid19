@@ -1,7 +1,23 @@
 import React from 'react'
-import {Container, Grid} from 'semantic-ui-react'
+import {Container, Grid , Input , Icon} from 'semantic-ui-react'
 import './SearchBar.css'
 class SearchBar extends React.Component {
+    state = {
+        searchValue : ''
+    }
+
+    timeout = null;
+    doChange = (event) => {
+        this.setState({ searchValue : event.target.value  })
+  
+        clearTimeout(this.timeout)
+    
+       this.timeout = setTimeout(() => {
+           this.props.callback(this.state.searchValue)
+       }, 1000);
+
+ 
+       } 
     render(){
         return(
             <Container fluid>
@@ -9,14 +25,18 @@ class SearchBar extends React.Component {
                 <Grid centered={true}>
                     <Grid.Row>
                 <Grid.Column width={8} >
-                <input placeholder="Search Countries"  style={{width:'100%' , height:'55px' , borderRadius :'10px' , 
-                backgroundColor:'#383834' , 
-               border : '1px solid #595954' , 
+                <Input placeholder="Search Countries"  
+                fluid
+                loading = {this.state.searchValue === '' ? false : true}
+                icon='search' 
+                onChange={this.doChange}
+                style={{ height:'55px' , borderRadius :'10px' , 
+                backgroundColor:'transparent' ,  
                marginTop : '10px',
-               color : 'white' , 
+               color : 'black' , 
                outline : 'none',
                paddingLeft : '10px'
-            }}  />
+            }} />
                 </Grid.Column>
                     </Grid.Row>
                 </Grid>

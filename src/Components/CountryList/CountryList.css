@@ -3,6 +3,7 @@
     padding: 0px;
     margin-top: 05px;
     margin-bottom: 05px;
+    cursor: pointer;
 }
 .totalCases h2 {
     font-size: 22px;
@@ -31,4 +32,9 @@
 
 .details{
     display: none;
+}
+
+
+.date {
+    
 }
