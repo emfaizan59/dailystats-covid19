@@ -11,7 +11,7 @@ class CountryList extends React.Component {
     
 
     componentDidMount = () => {
-        this.fetchItem("https://corona.lmao.ninja/countries" , 'all')       
+        this.fetchItem("https://corona.lmao.ninja/v2/countries" , 'all')       
     }
 
     fetchItem = (apiURL , status) => {
@@ -94,10 +94,10 @@ class CountryList extends React.Component {
    
         if(searchTerm === '')
         {
-          this.fetchItem("https://corona.lmao.ninja/countries" , 'all')
+          this.fetchItem("https://corona.lmao.ninja/v2/countries" , 'all')
         }
         else{
-          this.fetchItem("https://corona.lmao.ninja/countries" , searchTerm)    
+          this.fetchItem("https://corona.lmao.ninja/v2/countries" , searchTerm)    
         }
     }
 

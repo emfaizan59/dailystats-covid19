@@ -21,7 +21,7 @@ class Carousel extends React.Component {
  
     componentDidMount = () => {
 
-          fetch("https://corona.lmao.ninja/all")
+          fetch("https://corona.lmao.ninja/v2/all")
             .then(result => result.json())
             .then(result => 
                 {
